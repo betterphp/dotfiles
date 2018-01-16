@@ -42,3 +42,7 @@ alias l='ls -CFv'
 
 # Set terminal window title to this machines name
 printf '\033]2;%s\033\\' "${USER}@${HOSTNAME}"
+
+# Set default editor to vim
+export VISUAL=vim
+
