@@ -48,3 +48,15 @@ export VISUAL=vim
 
 # Don't break lines by default
 export PAGER="less -S"
+
+extra_bin_paths=(
+    "${HOME}/bin"
+    "${HOME}/.composer/vendor/bin"
+    "${HOME}/.config/yarn/global/node_modules/.bin/"
+)
+
+for path in ${extra_bin_paths[*]}; do
+    if [ -d "${path}" ]; then
+        PATH="${path}:${PATH}"
+    fi
+done
