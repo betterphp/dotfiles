@@ -1,0 +1,15 @@
+[submodule "vim/pack/default/start/vim-airline"]
+	path = vim/pack/default/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/default/start/gruvbox"]
+	path = vim/pack/default/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "vim/pack/default/start/ale"]
+	path = vim/pack/default/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/pack/default/start/ultisnips"]
+	path = vim/pack/default/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/pack/default/start/vim-signify"]
+	path = vim/pack/default/start/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
