@@ -58,3 +58,6 @@ hi ColorColumn ctermbg=23
 
 map <leader>tl gt
 map <leader>th gT
+
+" Use tree view in netrw by default
+let g:netrw_liststyle=3
