@@ -35,6 +35,9 @@ set signcolumn=yes
 " Statusline settings
 set laststatus=2
 
+" Always show the tab bar
+set showtabline=2
+
 " ALE highlights are annoying and seem slow
 " let g:ale_set_highlights = 0
 
