@@ -53,7 +53,7 @@ endif
 let g:ale_php_phpcs_standard='./ruleset.xml'
 
 " highlight col 80 to show long lines
-set colorcolumn=81,121
+set colorcolumn=121
 hi ColorColumn ctermbg=23
 
 map <leader>tl gt
