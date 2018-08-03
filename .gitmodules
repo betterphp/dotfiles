@@ -13,3 +13,9 @@
 [submodule ".vim/pack/default/start/ultisnips"]
 	path = .vim/pack/default/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/pack/default/start/pdv"]
+	path = .vim/pack/default/start/pdv
+	url = https://github.com/tobyS/pdv.git
+[submodule ".vim/pack/default/start/vmustache"]
+	path = .vim/pack/default/start/vmustache
+	url = https://github.com/tobyS/vmustache.git
