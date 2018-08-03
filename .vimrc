@@ -15,6 +15,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Disable text wrapping as default
+set nowrap
+
 " Colourscheme settings
 set t_Co=256
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
