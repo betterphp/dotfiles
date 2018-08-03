@@ -44,7 +44,8 @@ alias l='ls -CFv'
 printf '\033]2;%s\033\\' "${USER}@${HOSTNAME}"
 
 # Set default editor to vim
-export VISUAL=vim
+export VISUAL="vim"
+export EDITOR="vim"
 
 # Don't break lines by default
 export PAGER="less -S"
