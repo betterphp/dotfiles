@@ -19,3 +19,6 @@
 [submodule ".vim/pack/default/start/vmustache"]
 	path = .vim/pack/default/start/vmustache
 	url = https://github.com/tobyS/vmustache.git
+[submodule "fonts/fonts"]
+	path = fonts/fonts
+	url = https://github.com/powerline/fonts.git

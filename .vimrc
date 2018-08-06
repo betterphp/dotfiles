@@ -40,6 +40,13 @@ set signcolumn=yes
 
 " Statusline settings
 set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 2
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline#extensions#tmuxline#enabled = 0
 
 " Always show the tab bar
 set showtabline=2
