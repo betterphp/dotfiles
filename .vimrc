@@ -86,6 +86,9 @@ let g:pdv_template_dir = $HOME . "/.vim/pack/default/start/pdv/templates_snip"
 map <leader>pd :call pdv#DocumentWithSnip()<CR>
 
 " jsdoc comment generator
+let g:jsdoc_enable_es6 = 1
+let g:jsdoc_tags = {}
+let g:jsdoc_tags["returns"] = "return"
 map <leader>jd :call jsdoc#insert()<CR>
 
 " Good highlighting for JavaScript and JSX
