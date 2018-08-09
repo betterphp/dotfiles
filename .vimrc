@@ -21,6 +21,9 @@ set nowrap
 " Enable auto indent
 set autoindent
 
+" Only redraw once macros have finished instead of at each step
+set lazyredraw
+
 " Get colours to work when in tmux
 set t_Co=256
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
