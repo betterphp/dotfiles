@@ -81,7 +81,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Use tree view in netrw by default
 let g:netrw_liststyle=3
 
-" php doc comment generator
+" phpdoc comment generator
 let g:pdv_template_dir = $HOME . "/.vim/pack/default/start/pdv/templates_snip"
 map <leader>pd :call pdv#DocumentWithSnip()<CR>
 
