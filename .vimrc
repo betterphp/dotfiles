@@ -81,3 +81,6 @@ let g:netrw_liststyle=3
 " php doc comment generator
 let g:pdv_template_dir = $HOME . "/.vim/pack/default/start/pdv/templates_snip"
 map <leader>pd :call pdv#DocumentWithSnip()<CR>
+
+" Good highlighting for JavaScript and JSX
+let g:javascript_plugin_jsdoc=1
