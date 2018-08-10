@@ -93,3 +93,7 @@ map <leader>jd :call jsdoc#insert()<CR>
 
 " Good highlighting for JavaScript and JSX
 let g:javascript_plugin_jsdoc=1
+
+" Update git status more often
+let g:signify_realtime = 1
+let g:signify_cursorhold_insert = 0
