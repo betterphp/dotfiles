@@ -31,3 +31,6 @@
 [submodule ".vim/pack/default/start/vim-jsdoc"]
 	path = .vim/pack/default/start/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
+[submodule ".vim/pack/default/start/apiblueprint.vim"]
+	path = .vim/pack/default/start/apiblueprint.vim
+	url = https://github.com/kylef/apiblueprint.vim.git
