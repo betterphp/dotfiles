@@ -97,3 +97,9 @@ let g:javascript_plugin_jsdoc=1
 " Update git status more often
 let g:signify_realtime = 1
 let g:signify_cursorhold_insert = 0
+
+" Use xclip to copy/paste from the system clipboard
+map <leader>cp :r !xclip -selection c -o<CR>
+map <leader>cP :r !xclip -o<CR>
+vmap <leader>cc :w !xclip -selection c -i<CR>
+vmap <leader>cC :w !xclip -i<CR>
