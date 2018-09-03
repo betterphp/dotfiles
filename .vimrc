@@ -78,6 +78,9 @@ nnoremap <C-k> :m -2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+map <C-j> <C-e>
+map <C-k> <C-y>
+
 " Use tree view in netrw by default
 let g:netrw_liststyle=3
 
