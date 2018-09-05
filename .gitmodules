@@ -34,3 +34,6 @@
 [submodule ".vim/pack/default/start/apiblueprint.vim"]
 	path = .vim/pack/default/start/apiblueprint.vim
 	url = https://github.com/kylef/apiblueprint.vim.git
+[submodule ".vim/pack/default/start/vim-windowswap"]
+	path = .vim/pack/default/start/vim-windowswap
+	url = https://github.com/wesQ3/vim-windowswap.git

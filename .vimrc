@@ -107,3 +107,10 @@ map <leader>cp :r !xclip -selection c -o<CR>
 map <leader>cP :r !xclip -o<CR>
 vmap <leader>cc :w !xclip -selection c -i<CR>
 vmap <leader>cC :w !xclip -i<CR>
+
+" Allow old defaults for window swap plugin
+let g:windowswap_map_keys = 0
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
