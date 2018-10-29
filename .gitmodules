@@ -22,21 +22,15 @@
 [submodule "fonts/fonts"]
 	path = fonts/fonts
 	url = https://github.com/powerline/fonts.git
-[submodule ".vim/pack/default/start/vim-javascript"]
-	path = .vim/pack/default/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule ".vim/pack/default/start/vim-jsx"]
-	path = .vim/pack/default/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
 [submodule ".vim/pack/default/start/vim-jsdoc"]
 	path = .vim/pack/default/start/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
-[submodule ".vim/pack/default/start/apiblueprint.vim"]
-	path = .vim/pack/default/start/apiblueprint.vim
-	url = https://github.com/kylef/apiblueprint.vim.git
 [submodule ".vim/pack/default/start/vim-windowswap"]
 	path = .vim/pack/default/start/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap.git
 [submodule ".vim/pack/default/start/close-buffers.vim"]
 	path = .vim/pack/default/start/close-buffers.vim
 	url = https://github.com/Asheq/close-buffers.vim.git
+[submodule ".vim/pack/default/start/vim-polyglot"]
+	path = .vim/pack/default/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
