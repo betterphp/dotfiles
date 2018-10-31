@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: Update config file
+      template:
+        src: config/tmux.conf.j2
+        dest: ~/.tmux.conf

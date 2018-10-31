@@ -1,0 +1,17 @@
+- hosts: localhost
+  tasks:
+    - name: Create font folder
+      file:
+        path: ~/.local/share/fonts
+        state: directory
+
+    - name: Create symlinks
+      file:
+        src: "{{ item.src }}"
+        dest: "~/.local/share/fonts/{{ item.src | basename }}"
+        state: link
+      with_filetree: "{{ playbook_dir }}"
+      when: item.path is match(".+\.(ttf|otf|bdf|pfb|fnt|woff)")
+
+    - name: Clean up broken links
+      shell: 'find ~/.local/share/fonts -type l -exec test ! -e {} \; -delete'

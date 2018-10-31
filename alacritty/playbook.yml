@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Remove default config folder
+      file:
+        path: ~/.config/alacritty
+        state: absent
+
+    - name: Create config file
+      template:
+        src: config/alacritty.yml.j2
+        dest: ~/.alacritty.yml

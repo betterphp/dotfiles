@@ -1,0 +1,6 @@
+- import_playbook: fonts/playbook.yml
+- import_playbook: alacritty/playbook.yml
+- import_playbook: bash/playbook.yml
+- import_playbook: tmux/playbook.yml
+- import_playbook: mycli/playbook.yml
+- import_playbook: vim/playbook.yml

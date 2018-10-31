@@ -1,36 +1,36 @@
 [submodule ".vim/pack/default/start/vim-airline"]
-	path = .vim/pack/default/start/vim-airline
+	path = vim/plugins/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule ".vim/pack/default/start/gruvbox"]
-	path = .vim/pack/default/start/gruvbox
+	path = vim/plugins/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
 [submodule ".vim/pack/default/start/ale"]
-	path = .vim/pack/default/start/ale
+	path = vim/plugins/ale
 	url = https://github.com/w0rp/ale.git
 [submodule ".vim/pack/default/start/vim-signify"]
-	path = .vim/pack/default/start/vim-signify
+	path = vim/plugins/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
 [submodule ".vim/pack/default/start/ultisnips"]
-	path = .vim/pack/default/start/ultisnips
+	path = vim/plugins/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 [submodule ".vim/pack/default/start/pdv"]
-	path = .vim/pack/default/start/pdv
+	path = vim/plugins/pdv
 	url = https://github.com/tobyS/pdv.git
 [submodule ".vim/pack/default/start/vmustache"]
-	path = .vim/pack/default/start/vmustache
+	path = vim/plugins/vmustache
 	url = https://github.com/tobyS/vmustache.git
 [submodule "fonts/fonts"]
 	path = fonts/fonts
 	url = https://github.com/powerline/fonts.git
 [submodule ".vim/pack/default/start/vim-jsdoc"]
-	path = .vim/pack/default/start/vim-jsdoc
+	path = vim/plugins/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
 [submodule ".vim/pack/default/start/vim-windowswap"]
-	path = .vim/pack/default/start/vim-windowswap
+	path = vim/plugins/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap.git
 [submodule ".vim/pack/default/start/close-buffers.vim"]
-	path = .vim/pack/default/start/close-buffers.vim
+	path = vim/plugins/close-buffers.vim
 	url = https://github.com/Asheq/close-buffers.vim.git
 [submodule ".vim/pack/default/start/vim-polyglot"]
-	path = .vim/pack/default/start/vim-polyglot
+	path = vim/plugins/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git

@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: Create config file
+      template:
+        src: config/bashrc.j2
+        dest: ~/.bashrc

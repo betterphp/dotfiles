@@ -1,0 +1,52 @@
+- hosts: localhost
+  tasks:
+    - name: Update config file
+      template:
+        src: config/vimrc.j2
+        dest: ~/.vimrc
+
+    - name: Check for old symlink (pack)
+      stat:
+        path: ~/.vim/pack
+      register: pack_stat
+
+    - name: Check for old symlink (default)
+      stat:
+        path: ~/.vim/pack/default
+      register: default_stat
+
+    - name: Check for old symlink (start)
+      stat:
+        path: ~/.vim/pack/default/start
+      register: start_stat
+
+    - name: Remove old symlinks
+      file:
+        path: "{{ item.stat.path }}"
+        state: absent
+      with_items:
+        - "{{ pack_stat }}"
+        - "{{ default_stat }}"
+        - "{{ start_stat }}"
+      when: ( item.stat.exists == True ) and ( item.stat.islnk == True )
+
+    - name: Create plugin folder
+      file:
+        path: ~/.vim/pack/default/start
+        state: directory
+
+    - name: List plugins
+      find:
+        path: "{{ playbook_dir }}/plugins"
+        file_type: directory
+      register: vim_plugin_list
+
+    - name: Link plugins
+      file:
+        src: "{{ item.path }}"
+        dest: "~/.vim/pack/default/start/{{ item.path | basename }}"
+        state: link
+      with_items: "{{ vim_plugin_list.files }}"
+
+    - name: Clean up broken links
+      shell: 'find ~/.vim/pack/default/start -type l -exec test ! -e {} \; -delete'
