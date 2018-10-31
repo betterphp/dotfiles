@@ -34,3 +34,6 @@
 [submodule ".vim/pack/default/start/vim-polyglot"]
 	path = vim/plugins/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/plugins/vim-editorconfig"]
+	path = vim/plugins/vim-editorconfig
+	url = https://github.com/sgur/vim-editorconfig.git
