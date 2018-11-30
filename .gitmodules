@@ -37,3 +37,6 @@
 [submodule "vim/plugins/vim-editorconfig"]
 	path = vim/plugins/vim-editorconfig
 	url = https://github.com/sgur/vim-editorconfig.git
+[submodule "vim/plugins/taboo.vim"]
+	path = vim/plugins/taboo.vim
+	url = https://github.com/gcmt/taboo.vim.git
