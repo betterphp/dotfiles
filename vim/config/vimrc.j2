@@ -116,3 +116,6 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 " Don't replace the nice tabline
 let g:taboo_tabline = 0
+
+" Tweak default indentation for yaml files (https://stackoverflow.com/a/37488992/3270837)
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
