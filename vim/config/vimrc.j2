@@ -123,5 +123,8 @@ let g:taboo_tabline = 0
 " Tweak default indentation for yaml files (https://stackoverflow.com/a/37488992/3270837)
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Add shortcut for toggling breakpoints
+nnoremap <leader>b :Breakpoint<CR>
+
 " Include Vdebug path maps file
 source ~/.vimrc-vdebug
