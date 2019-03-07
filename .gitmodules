@@ -40,3 +40,6 @@
 [submodule "vim/plugins/taboo.vim"]
 	path = vim/plugins/taboo.vim
 	url = https://github.com/betterphp/taboo.vim.git
+[submodule "vim/plugins/vdebug"]
+	path = vim/plugins/vdebug
+	url = https://github.com/vim-vdebug/vdebug.git
