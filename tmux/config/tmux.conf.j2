@@ -67,5 +67,8 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 # Keep the contents of panes when saved
 set -g @resurrect-capture-pane-contents 'on'
 
+# Restore vim sessions if possible
+set -g @resurrect-strategy-vim 'session'
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'

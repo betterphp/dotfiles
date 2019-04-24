@@ -43,3 +43,6 @@
 [submodule "vim/plugins/vdebug"]
 	path = vim/plugins/vdebug
 	url = https://github.com/vim-vdebug/vdebug.git
+[submodule "vim/plugins/vim-obsession"]
+	path = vim/plugins/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
