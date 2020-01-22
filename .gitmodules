@@ -46,3 +46,6 @@
 [submodule "vim/plugins/vim-obsession"]
 	path = vim/plugins/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
+[submodule "vim/plugins/vim-numbertoggle"]
+	path = vim/plugins/vim-numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
