@@ -4,3 +4,24 @@
       template:
         src: config/tmux.conf.j2
         dest: ~/.tmux.conf
+
+    - name: Create plugin folder
+      file:
+        path: ~/.tmux/plugins
+        state: directory
+
+    - name: List plugins
+      find:
+        path: "{{ playbook_dir }}/plugins"
+        file_type: directory
+      register: tmux_plugin_list
+
+    - name: Link plugins
+      file:
+        src: "{{ item.path }}"
+        dest: "~/.tmux/plugins/{{ item.path | basename }}"
+        state: link
+      with_items: "{{ tmux_plugin_list.files }}"
+
+    - name: Clean up broken links
+      shell: 'find ~/.tmux/plugins -type l -exec test ! -e {} \; -delete'

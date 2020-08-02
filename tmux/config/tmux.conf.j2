@@ -50,6 +50,10 @@ bind-key Right select-pane -R
 # Allow windows to be different sizes
 setw -g aggressive-resize on
 
+# Set a more helpful window title on the terminal
+set-option -g set-titles on
+set-option -g set-titles-string "Tmux #{session_name}: #{window_name} (#{window_panes})"
+
 # Only pass terminal bells to the window manager if they occur in the current window
 set-option -g visual-bell off
 set-option -g bell-action current
@@ -69,7 +73,3 @@ set -g @resurrect-strategy-vim 'session'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
-
-# Set a more helpful window title on the terminal
-set-option -g set-titles on
-set-option -g set-titles-string "Tmux #{session_name}: #{window_name} (#{window_panes})"
