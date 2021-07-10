@@ -76,10 +76,10 @@ map <leader>tl gt
 map <leader>th gT
 
 " Add helpers to move lines up or down
-nnoremap <C-j> :m +1<CR>==
-nnoremap <C-k> :m -2<CR>==
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nmap <C-j> :m +1<CR>==
+nmap <C-k> :m -2<CR>==
+vmap <C-j> :m '>+1<CR>gv=gv
+vmap <C-k> :m '<-2<CR>gv=gv
 
 " Map nicer shortcut for scrolling the screen
 map <C-J> <C-e>
@@ -118,7 +118,7 @@ let g:taboo_tabline = 0
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Add shortcut for toggling breakpoints
-nnoremap <leader>b :Breakpoint<CR>
+nmap <leader>b :Breakpoint<CR>
 
 " Include Vdebug path maps file
 source ~/.vimrc-vdebug
