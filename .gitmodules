@@ -55,3 +55,9 @@
 [submodule "vim/plugins/vim-openscad"]
 	path = vim/plugins/vim-openscad
 	url = https://github.com/sirtaj/vim-openscad.git
+[submodule "vim/plugins/fzf"]
+	path = vim/plugins/fzf
+	url = git@github.com:junegunn/fzf.git
+[submodule "vim/plugins/fzf.vim"]
+	path = vim/plugins/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
