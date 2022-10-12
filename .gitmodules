@@ -52,6 +52,7 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+	ignore = dirty
 [submodule "vim/plugins/vim-openscad"]
 	path = vim/plugins/vim-openscad
 	url = https://github.com/sirtaj/vim-openscad.git
