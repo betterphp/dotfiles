@@ -1,14 +1,14 @@
 - hosts: localhost
   tasks:
-    - name: Update config file
-      template:
-        src: config/vimrc.j2
-        dest: ~/.vimrc
-
     - name: Create vdebug maps file
       file:
         path: ~/.vimrc-vdebug
         state: file
+
+    - name: Update config file
+      template:
+        src: config/vimrc.j2
+        dest: ~/.vimrc
 
     - name: Check for old symlink (pack)
       stat:

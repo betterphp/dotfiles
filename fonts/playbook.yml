@@ -1,17 +1,26 @@
 - hosts: localhost
   tasks:
+    - name: Set paths
+      set_fact:
+        font_path: "{{ '~/.local/share/fonts' if ansible_distribution != 'MacOSX' else '~/.custom_fonts' }}"
+
     - name: Create font folder
       file:
-        path: ~/.local/share/fonts
+        path: "{{ font_path }}"
         state: directory
 
     - name: Create symlinks
       file:
         src: "{{ item.src }}"
-        dest: "~/.local/share/fonts/{{ item.src | basename }}"
+        dest: "{{ font_path }}/{{ item.src | basename }}"
         state: link
       with_filetree: "{{ playbook_dir }}"
-      when: item.path is match(".+\.(ttf|otf|bdf|pfb|fnt|woff)")
+      when: item.path is match(".+\.(ttf|otf|woff)")
 
     - name: Clean up broken links
-      shell: 'find ~/.local/share/fonts -type l -exec test ! -e {} \; -delete'
+      shell: 'find {{ font_path }} -type l -exec test ! -e {} \; -delete'
+
+    - name: Output Mac Advice
+      debug:
+        msg: "Run 'open -b com.apple.FontBook ~/.custom_fonts/*' to install the fonts"
+      when: ansible_distribution == "MacOSX"

@@ -10,8 +10,16 @@
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
         . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
+    fi
+
+    if [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
+    fi
+
+    if [ -d /usr/local/etc/bash_completion.d ]; then
+        for file in /usr/local/etc/bash_completion.d/*; do
+            . $file
+        done
     fi
 fi
 
@@ -54,6 +62,7 @@ export EDITOR="vim"
 export PAGER="less -S"
 
 extra_bin_paths=(
+    "/usr/local/opt/coreutils/libexec/gnubin"
     "${HOME}/bin"
     "${HOME}/.local/bin"
     "${HOME}/.composer/vendor/bin"
