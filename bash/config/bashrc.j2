@@ -61,25 +61,6 @@ export EDITOR="vim"
 # Don't break lines by default
 export PAGER="less -S"
 
-extra_bin_paths=(
-    "/usr/local/opt/coreutils/libexec/gnubin"
-    "${HOME}/bin"
-    "${HOME}/.local/bin"
-    "${HOME}/.composer/vendor/bin"
-    "${HOME}/.config/yarn/global/node_modules/.bin/"
-    "${HOME}/Android/Sdk/tools"
-    "${HOME}/Android/Sdk/tools/bin"
-    "${HOME}/Android/Sdk/platform-tools"
-    "${HOME}/Android/Sdk/emulator"
-    "${HOME}/.cargo/bin"
-)
-
-for path in ${extra_bin_paths[*]}; do
-    if [ -d "${path}" ]; then
-        PATH="${path}:${PATH}"
-    fi
-done
-
 # SDK location managed by Android Studio
 android_sdk_path_options=(
     # Linux
@@ -94,6 +75,27 @@ for path in ${android_sdk_path_options[*]}; do
         break
     fi
 done;
+
+# Any extra places we might find commands
+extra_bin_paths=(
+    "/usr/local/opt/coreutils/libexec/gnubin"
+    "/usr/local/opt/openjdk/bin"
+    "${HOME}/bin"
+    "${HOME}/.local/bin"
+    "${HOME}/.composer/vendor/bin"
+    "${HOME}/.config/yarn/global/node_modules/.bin/"
+    "${HOME}/.cargo/bin"
+    "${ANDROID_HOME}/tools"
+    "${ANDROID_HOME}/tools/bin"
+    "${ANDROID_HOME}/platform-tools"
+    "${ANDROID_HOME}/emulator"
+)
+
+for path in ${extra_bin_paths[*]}; do
+    if [ -d "${path}" ]; then
+        PATH="${path}:${PATH}"
+    fi
+done
 
 # Keep Ansible boring by default
 export ANSIBLE_NOCOWS=1
