@@ -81,7 +81,19 @@ for path in ${extra_bin_paths[*]}; do
 done
 
 # SDK location managed by Android Studio
-export ANDROID_HOME="${HOME}/Android/Sdk"
+android_sdk_path_options=(
+    # Linux
+    "${HOME}/Android/Sdk"
+    # macOS
+    "${HOME}/Library/Android/sdk"
+)
+
+for path in ${android_sdk_path_options[*]}; do
+    if [ -d "${path}" ]; then
+        export ANDROID_HOME=$path
+        break
+    fi
+done;
 
 # Keep Ansible boring by default
 export ANSIBLE_NOCOWS=1
