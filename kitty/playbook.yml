@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: Create config file
+      template:
+        src: config/kitty.conf.j2
+        dest: ~/.config/kitty/kitty.conf
