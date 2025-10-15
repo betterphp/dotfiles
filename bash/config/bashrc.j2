@@ -48,8 +48,9 @@ alias ll='ls -halFv'
 alias la='ls -Av'
 alias l='ls -CFv'
 
-alias xo='xo-cli'
 alias copy='xclip -selection clipboard'
+alias ai='ssh root@10.2.1.20 -t "ollama run gemma3:27b"'
+alias magssh='ssh jacek@ssh.magsoft.dev -t -- '
 
 # Set terminal window title to this machines name
 printf '\033]2;%s\033\\' "${USER}@${HOSTNAME}"
