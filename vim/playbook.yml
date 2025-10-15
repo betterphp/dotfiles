@@ -10,6 +10,11 @@
         src: config/vimrc.j2
         dest: ~/.vimrc
 
+    - name: Update neovim init script
+      template:
+        src: config/init.vim
+        dest: ~/.config/nvim/init.vim
+
     - name: Check for old symlink (pack)
       stat:
         path: ~/.vim/pack
