@@ -7,3 +7,4 @@
 - import_playbook: tmux/playbook.yml
 - import_playbook: mycli/playbook.yml
 - import_playbook: vim/playbook.yml
+- import_playbook: neovim/playbook.yml

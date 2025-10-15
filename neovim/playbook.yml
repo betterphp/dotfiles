@@ -1,0 +1,25 @@
+- hosts: localhost
+  tasks:
+    - name: Create plugin folders
+      file:
+        path: "{{ item }}"
+        state: directory
+      with_items:
+        - ~/.config/nvim/lua
+        - ~/.config/nvim/lua/config
+        - ~/.config/nvim/lua/plugins
+
+    - name: Update init file
+      template:
+        src: config/init.lua.j2
+        dest: ~/.config/nvim/init.lua
+
+    - name: Update plugin loader
+      template:
+        src: config/lazy.lua
+        dest: ~/.config/nvim/lua/config/lazy.lua
+
+    - name: Update plugin specs
+      template:
+        src: config/spec.lua
+        dest: ~/.config/nvim/lua/plugins/spec.lua
