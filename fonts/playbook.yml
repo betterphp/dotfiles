@@ -17,6 +17,27 @@
       with_filetree: "{{ playbook_dir }}"
       when: item.path is match(".+\.(ttf|otf|woff)")
 
+    - name: Install extra terminal font (1/2)
+      get_url:
+        url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CommitMono.zip
+        dest: ~/.dotfiles/CommitMono.v3.4.0.zip
+
+    - name: Install extra terminal font (2/2)
+      ansible.builtin.unarchive:
+        src: ~/.dotfiles/CommitMono.v3.4.0.zip
+        dest: ~/.dotfiles
+        exclude:
+          - README.md
+          - LICENSE
+
+    - name: Create more symlinks
+      file:
+        src: "{{ item.src }}"
+        dest: "{{ font_path }}/{{ item.src | basename }}"
+        state: link
+      with_filetree: ~/.dotfiles
+      when: item.path is match(".+\.(ttf|otf|woff)")
+
     - name: Clean up broken links
       shell: 'find {{ font_path }} -type l -exec test ! -e {} \; -delete'
 

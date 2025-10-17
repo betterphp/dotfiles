@@ -1,5 +1,9 @@
 - hosts: localhost
   tasks:
+  - name: Create .dotfiles folder
+    file:
+      path: ~/.dotfiles
+      state: directory
 
 - import_playbook: fonts/playbook.yml
 - import_playbook: alacritty/playbook.yml

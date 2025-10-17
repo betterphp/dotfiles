@@ -1,1 +1,86 @@
 require("config.lazy")
+
+-- Show line numbers
+vim.o.number = true;
+vim.o.ruler = true;
+
+-- Show whitespace as visible characters
+vim.o.list = true
+vim.opt.listchars = { space = "·", tab = "|─" }
+
+-- More sane indentation defaults
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.autoindent = true;
+
+-- scroll ahead of the cursor a bit
+vim.o.scrolloff = 10
+
+-- Disable text wrapping
+vim.o.wrap = false;
+
+-- Disable mouse mode
+vim.o.mouse = ""
+
+-- Avoid redrawing when no needed
+vim.o.lazyredraw = true
+
+-- Keep undo history
+vim.o.undofile = true
+
+-- Nice colour settings
+vim.o.termguicolors = true
+vim.o.background = "dark"
+vim.g.gruvbox_termcolors = 256
+vim.g.gruvbox_contrast_dark = "hard"
+vim.g.gruvbox_sign_column = "bg0"
+vim.cmd("colors gruvbox")
+
+-- Always show the sign column
+vim.o.signcolumn = "yes"
+
+-- Always show the tab bar
+vim.o.showtabline = 2
+
+-- Statusline settings
+-- vim.o.laststatus = 2
+require("bufferline").setup{options = {
+  mode = "tabs",
+}}
+
+-- Highlight columns at line length limits
+vim.o.colorcolumn = "81,121"
+
+-- Use tree view for folders by default
+vim.g.netrw_liststyle = 3
+
+-- Update sign column loads faster
+vim.g.signify_realtime = 1
+vim.g.signify_cursorhold_insert = 0
+
+-- Extra key maps
+-- Easier tab switching
+vim.keymap.set("n", "<leader>tl", "gt")
+vim.keymap.set("n", "<leader>th", "gT")
+
+-- Scroll the whole file
+vim.keymap.set("n", "<C-J>", "<C-e>")
+vim.keymap.set("n", "<C-K>", "<C-y>")
+
+-- Toggle vdebug breakpoint
+vim.keymap.set("n", "<leader>b", ":Breakpoint<CR>")
+
+-- fzf search stuff
+vim.keymap.set("n", "<leader>ff", ":Files<CR>")
+vim.keymap.set("n", "<leader>fc", ":Rg<CR>")
+vim.keymap.set("n", "<leader>fb", ":Buffers<CR>")
+vim.keymap.set("n", "<leader>fw", ":Windows<CR>")
+vim.keymap.set("n", "<leader>fg", ":Commits<CR>")
+
+-- Disable arrow keys
+vim.keymap.set({"n", "v"}, "<Up>", "<Nop>")
+vim.keymap.set({"n", "v"}, "<Down>", "<Nop>")
+vim.keymap.set({"n", "v"}, "<Left>", "<Nop>")
+vim.keymap.set({"n", "v"}, "<Right>", "<Nop>")
