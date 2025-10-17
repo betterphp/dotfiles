@@ -44,10 +44,11 @@ vim.o.signcolumn = "yes"
 -- Always show the tab bar
 vim.o.showtabline = 2
 
--- Statusline settings
--- vim.o.laststatus = 2
+-- Bufferline settings
 require("bufferline").setup{options = {
-  mode = "tabs",
+    mode = "tabs",
+    show_close_icon = false,
+    show_buffer_close_icons = false,
 }}
 
 -- Highlight columns at line length limits
