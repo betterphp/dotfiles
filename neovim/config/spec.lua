@@ -1,5 +1,17 @@
 return {
     { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
+    {
+        "rachartier/tiny-inline-diagnostic.nvim",
+        event = "VeryLazy",
+        priority = 1000,
+        config = function()
+            require('tiny-inline-diagnostic').setup({
+                preset = "modern",
+            })
+
+            vim.diagnostic.config({ virtual_text = false })
+        end
+    },
     { "lewis6991/gitsigns.nvim" },
     {
         "dense-analysis/ale",
@@ -32,13 +44,4 @@ return {
     },
     { "romainl/vim-cool" },
     { "danymat/neogen", config = true },
-    {
-        "rachartier/tiny-inline-diagnostic.nvim",
-        event = "VeryLazy",
-        priority = 1000,
-        config = function()
-            require('tiny-inline-diagnostic').setup()
-            vim.diagnostic.config({ virtual_text = false })
-        end
-    },
 }
