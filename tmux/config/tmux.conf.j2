@@ -58,6 +58,12 @@ set-option -g set-titles-string "Tmux #{session_name}: #{window_name} (#{window_
 set-option -g visual-bell off
 set-option -g bell-action current
 
+# Reduce escape key delay time
+set-option -sg escape-time 10
+
+# Make colours work properly
+set-option -sa terminal-features ',xterm-kitty:RGB'
+
 # Pass focus events to termials when switching panes
 set -g focus-events on
 

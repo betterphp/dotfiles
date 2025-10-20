@@ -1,5 +1,6 @@
 return {
-    { "mhinz/vim-signify" },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
+    { "lewis6991/gitsigns.nvim" },
     {
         "dense-analysis/ale",
         config = function()
@@ -9,7 +10,6 @@ return {
             g.ale_use_neovim_diagnostics_api = 1
         end,
     },
-    { "morhetz/gruvbox" },
     { "kazhala/close-buffers.nvim" },
     { "junegunn/fzf" },
     { "junegunn/fzf.vim" },
@@ -29,5 +29,16 @@ return {
     {
         "akinsho/bufferline.nvim",
         dependencies = "nvim-tree/nvim-web-devicons",
+    },
+    { "romainl/vim-cool" },
+    { "danymat/neogen", config = true },
+    {
+        "rachartier/tiny-inline-diagnostic.nvim",
+        event = "VeryLazy",
+        priority = 1000,
+        config = function()
+            require('tiny-inline-diagnostic').setup()
+            vim.diagnostic.config({ virtual_text = false })
+        end
     },
 }
