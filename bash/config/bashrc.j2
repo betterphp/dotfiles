@@ -79,19 +79,20 @@ done;
 
 # Any extra places we might find commands
 extra_bin_paths=(
-    "/usr/local/opt/coreutils/libexec/gnubin"
-    "/usr/local/opt/openjdk@21/bin"
-    "/usr/local/opt/ruby/bin"
-    "/usr/local/lib/ruby/gems/3.4.0/bin"
-    "${HOME}/bin"
-    "${HOME}/.local/bin"
-    "${HOME}/.composer/vendor/bin"
-    "${HOME}/.config/yarn/global/node_modules/.bin/"
-    "${HOME}/.cargo/bin"
+    "${ANDROID_HOME}/emulator"
+    "${ANDROID_HOME}/platform-tools"
     "${ANDROID_HOME}/tools"
     "${ANDROID_HOME}/tools/bin"
-    "${ANDROID_HOME}/platform-tools"
-    "${ANDROID_HOME}/emulator"
+    "${HOME}/.cargo/bin"
+    "${HOME}/.composer/vendor/bin"
+    "${HOME}/.config/yarn/global/node_modules/.bin/"
+    "${HOME}/.local/bin"
+    "${HOME}/bin"
+    "/usr/local/lib/ruby/gems/3.4.0/bin"
+    "/usr/local/opt/coreutils/libexec/gnubin"
+    "/usr/local/opt/imagemagick-full/bin"
+    "/usr/local/opt/openjdk@21/bin"
+    "/usr/local/opt/ruby/bin"
 )
 
 for path in ${extra_bin_paths[*]}; do
@@ -99,6 +100,12 @@ for path in ${extra_bin_paths[*]}; do
         PATH="${path}:${PATH}"
     fi
 done
+
+if [ -d "/usr/local/opt/imagemagick-full/bin" ]; then
+    export LDFLAGS="-L/usr/local/opt/imagemagick-full/lib"
+    export CPPFLAGS="-I/usr/local/opt/imagemagick-full/include"
+    export PKG_CONFIG_PATH="/usr/local/opt/imagemagick-full/lib/pkgconfig"
+fi
 
 # Keep Ansible boring by default
 export ANSIBLE_NOCOWS=1
