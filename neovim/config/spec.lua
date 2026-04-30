@@ -1,4 +1,5 @@
 return {
+    { 'saghen/blink.lib' },
     { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
     {
         "rachartier/tiny-inline-diagnostic.nvim",
